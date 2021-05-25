@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: About
+nav_order: 2
 ---
-# About page
+# About
+My name is Paul Lassen and this is my personal website. Here I will document my personal projects and lay out my CV.
 
-On this page I inform you about myself.
+At the moment this site is in complete disarray.
