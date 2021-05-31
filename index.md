@@ -13,7 +13,7 @@ The site is quite sparse at the moment, but I've only just started on it. As I w
 - [ ] Make a nice About page
 - [ ] Fill out Resume page
 - [x] Figure out Project Navigation
-- [ ] Create Blog Page
+- [x] Create Blog Page
 - [x] Begin Quadracopter documentation
 
 
