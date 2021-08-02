@@ -1,0 +1,94 @@
+###
+# This is your references.txt file. To exit press q or Escape and write :q <enter> ...
+
+Use refe to write any notes you want here in vim, in any format you want.
+(You may find a vim tutorial below)
+
+Feel free to delete any/all text here, it will not break anything.
+###
+
+__help
+ref # searches references.txt file, open in file viewer less. q to exit.
+ref --open # Open references.txt file in system default editor (e.g. TextEdit)
+refe # searches references.txt (or other) file and open in text editor Vim. Escape and write :q to exit.
+ref --help # Help menu
+refe --help # Help menu
+
+__vim (refe) commands
+Press Escape first then write (text should appear at the bottom status bar of the screen. Remember to press enter at the end):
+:w # write file (save)
+:q # quit file (exit)
+:q! # force quit
+:wq # Write and quit
+:wq! # Force write and quit
+
+__vim tutorials and cheatsheets
+# Vim tutorial: https://www.openvim.com/
+# Vim cheatsheet https://vimsheet.com/
+
+__vim shortcuts write, edit and search
+# Try to press escape first then press:
+i # Insert mode. Now you can write text
+dd # delete (yank) line. To paste, use p or P
+V # Visual mode. Select lines. To delete use dd ... to copy use y
+/ # Search. E.g. /keywords ... Use n for next and Shift + N for previous.
+
+__terminal
+Select and copy text: ctrl + r
+Use again to return to normal terminal interaction
+Alternatives:
+Select text and use middle mouse button to paste (mouse wheel click)
+Select text -> Ctrl + insert (copy)i -> shift + insert (paste)
+
+__mac show emoticons/smileys panel
+Ctrl + command + space
+
+__mac open folder from terminal
+open .
+
+__mac change caps lock to escape
+First, go into the System Preferences, choose Keyboard, then the Keyboard Tab (first tab), and click Modifier Keys:
+https://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x
+
+__mac spotlight open folder file is in
+Search -> Select file -> Command + R or Command + Enter
+
+__mac open multiple calculators
+open -na calculator
+
+__mac calculator not showing space thousand separator
+System preferences ->  Language and region -> Advanced
+-> number separators -> groupings -> set space
+
+__mac zoom in
+Apple + option + 8
+Apple + option + =-\
+
+__mac delete key
+Ctrl + D
+
+__excel macOS change excel comma to dot regional setting, decimal separator
+System apple button -> system preferences
+Language and region -> advanced
+Under general -> change number separator decimal to .
+
+__bash find and kill process
+pgrep chrome
+#Check id
+kill -9 ID
+pkill -f chrome
+
+__python bash
+# run python code from bash
+python -c "print("Hello world!")"
+
+__python
+# Get unique from list
+set(list_x)
+
+__python
+# Add new folder to python path for importing modules, and show python paths
+import sys
+print(sys.path)
+sys.path.insert(0, "/home/admin")
+sys.path.insert(0, "/home/admin/scripts")
