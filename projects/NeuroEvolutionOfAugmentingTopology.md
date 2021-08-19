@@ -13,3 +13,7 @@ I finished my bachelor's degree on darkest days of 2016 in the frigid north and 
 
 ## Design Choices
 I chose to implement the algorithm in Java for two reasons. First, I am a masochist. Second, Java was the first programming language I learned. So out of some twisted sense of nostalgia I ended up using a language that I hadn't used since my (handwritten) AP Computer Science Exam and which I haven't used since.
+
+## Todo
+- [ ] Describe code base
+- [ ] Gifify the output videos
