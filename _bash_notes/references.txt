@@ -1,94 +1,78 @@
-###
-# This is your references.txt file. To exit press q or Escape and write :q <enter> ...
+# Reference file for Ubuntu / Linux solutions
 
-Use refe to write any notes you want here in vim, in any format you want.
-(You may find a vim tutorial below)
+__setup __bash_notes @run
+git clone https://github.com/Magnushhoie/bash_notes.git
+chmod +x bash_notes/setup.sh
+cd bash_notes/
+./setup.sh
 
-Feel free to delete any/all text here, it will not break anything.
-###
 
-__help
-ref # searches references.txt file, open in file viewer less. q to exit.
-ref --open # Open references.txt file in system default editor (e.g. TextEdit)
-refe # searches references.txt (or other) file and open in text editor Vim. Escape and write :q to exit.
-ref --help # Help menu
-refe --help # Help menu
+__setup __clang __llvm __cpp_compiler
+sudo apt install build-essential xz-utils curl
+curl -SL $URL | tar -xJC .
+mv $LONG_FILE clang_x.x.x
+sudo mv clang_x.x.x /usr/local
+export PATH=/usr/local/clang_x.x.x/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/clang_x.x.x/lib:$LD_LIBRARY_PATH
 
-__vim (refe) commands
-Press Escape first then write (text should appear at the bottom status bar of the screen. Remember to press enter at the end):
-:w # write file (save)
-:q # quit file (exit)
-:q! # force quit
-:wq # Write and quit
-:wq! # Force write and quit
 
-__vim tutorials and cheatsheets
-# Vim tutorial: https://www.openvim.com/
-# Vim cheatsheet https://vimsheet.com/
 
-__vim shortcuts write, edit and search
-# Try to press escape first then press:
-i # Insert mode. Now you can write text
-dd # delete (yank) line. To paste, use p or P
-V # Visual mode. Select lines. To delete use dd ... to copy use y
-/ # Search. E.g. /keywords ... Use n for next and Shift + N for previous.
 
-__terminal
-Select and copy text: ctrl + r
-Use again to return to normal terminal interaction
-Alternatives:
-Select text and use middle mouse button to paste (mouse wheel click)
-Select text -> Ctrl + insert (copy)i -> shift + insert (paste)
+__setup __bbb __PRU #Configures the PRUs to work
+# Test if PRUS are working
+rc_test_drivers
+# Both of these commands have fixed issues (first one seems more legit)
+sudo /opt/scripts/tools/update_kernel.sh --ti-rt-channel --lts-4_19
+sudo dd if=/dev/zero of=/dev/mmcblk1 bs=1M count=10
 
-__mac show emoticons/smileys panel
-Ctrl + command + space
+__setup __bbb __WIFI 
+connmanctl
+	enable wifi
+	tether wifi disable
+	scan wifi
+	services
+	agent on
+	connect wifi_$WIFI_ID
+		$PASSWORD
+	quit
 
-__mac open folder from terminal
-open .
+__setup __bbb __upgrade
+cd /opt/scripts
+git pull
+sudo tools/update_kernel.sh
+sudo shutdown -r now
+sudo apt update
+sudo apt upgrade
+sudo /opt/scripts/tools/version.sh
 
-__mac change caps lock to escape
-First, go into the System Preferences, choose Keyboard, then the Keyboard Tab (first tab), and click Modifier Keys:
-https://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x
+__setup __bbb __ros __install
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
-__mac spotlight open folder file is in
-Search -> Select file -> Command + R or Command + Enter
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
-__mac open multiple calculators
-open -na calculator
+sudo apt-get update
+sudo apt install -y python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake
 
-__mac calculator not showing space thousand separator
-System preferences ->  Language and region -> Advanced
--> number separators -> groupings -> set space
+sudo rosdep init
+rosdep update
 
-__mac zoom in
-Apple + option + 8
-Apple + option + =-\
+mkdir ~/ros_catkin_ws
+cd ~/ros_catkin_ws
 
-__mac delete key
-Ctrl + D
+rosinstall_generator ros_base --rosdistro noetic --deps --wet-only --tar > noetic-ros_base-wet.rosinstall
 
-__excel macOS change excel comma to dot regional setting, decimal separator
-System apple button -> system preferences
-Language and region -> advanced
-Under general -> change number separator decimal to .
+wstool init src noetic-ros_base-wet.rosinstall
+rosdep install -y --from-paths src --ignore-src --rosdistro noetic -r --os=debian:buster
 
-__bash find and kill process
-pgrep chrome
-#Check id
-kill -9 ID
-pkill -f chrome
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic
 
-__python bash
-# run python code from bash
-python -c "print("Hello world!")"
+__setup __ros2 __rosinstall_generator
+rosinstall_generator --deps --tar --rosdistro=foxy ros_base > foxy_ros_base.rosinstall
+mkdir -p foxy_ros_base_ws/src
+cd foxy_ros_base_ws/src
+vcs import < /path/to/foxy_ros_base.rosinstall
 
-__python
-# Get unique from list
-set(list_x)
 
-__python
-# Add new folder to python path for importing modules, and show python paths
-import sys
-print(sys.path)
-sys.path.insert(0, "/home/admin")
-sys.path.insert(0, "/home/admin/scripts")
+__test
+#This is a test
+echo "Hello World"
