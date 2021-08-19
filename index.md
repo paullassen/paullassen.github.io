@@ -23,6 +23,6 @@ My hope is that my showing my work publicly as I do it, I'll get more done out o
 - [x] Figure out Project Navigation
 - [x] Create Blog Page
 - [x] Begin Quadracopter documentation
-- [x] Document NEAT
+- [ ] Document NEAT
 
 
