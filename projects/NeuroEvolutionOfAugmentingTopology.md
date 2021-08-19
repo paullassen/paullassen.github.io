@@ -2,7 +2,7 @@
 layout: default
 title: Neuro-Evolution of Augmenting Topology
 parent: Projects
-nav_order: 1
+nav_order: 2
 has_children: true
 ---
 # **Neuro-Evolution of Augmenting Topology**
