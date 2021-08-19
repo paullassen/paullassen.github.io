@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-nav_order: 200
+nav_order: 201
 ---
 # About
-My name is Paul Lassen and this is my website.
+Felt cute, might delete later
