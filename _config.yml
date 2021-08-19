@@ -35,7 +35,7 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
-
+  - jekyll-spaceship
 defaults:
   -
     scope:
