@@ -15,6 +15,7 @@ Aerial robots have historically been used as flying eyes in the skies. Mounted w
 In this post, I'll address the issue of performing physical interaction with the environment by a multi-rotor UAV implementing a basic cascaded position-attitude controller, typical of most of consumer-grade multi-rotor systems. More specifically, I identify mathematically the boundaries where the system can safely be used to perform physical interaction with the environment. These boundaries are then verified both in simulation and by experiment.
 
 ## System Modelling
+It is convenient to lay out the assumptions I make while building the mathematical model of the drone platform in flight and in contact with the environment. 
 $$ \frac{1}{n^{2}} $$
 ### Assumptions
 
