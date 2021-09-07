@@ -167,6 +167,7 @@ $$ m \ddot{\xi}^W_B = \begin{bmatrix}  T (S_\phi S_\psi + C_\phi C_\psi S_\theta
 It's worth noting that, for the UAV to remain airborne, it needs to maintain zero acceleration along the \\( z \\) axis of the inertial frame \\( W \\). From equation 9,   
 
 $$ m \ddot{z}^W_B = T C_\theta C_\phi - mg = 0 $$  
+
 Solving for \\( T \\) to find the thrust required to hover, reveals  
 
 $$ T_{hover} = \frac{mg}{C_\theta C_\phi} \tag{10} $$
