@@ -51,7 +51,7 @@ It is convenient to start by laying out the assumptions that I make while buildi
 </tr>
 <tr>
 <td markdown="span"> $$ {\xi}^\circ_\star $$ </td>
-<td markdown="span"> The position of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
+<td markdown="span"> The position of the origin of frame \\( \star \\) w.r.t. frame \\( \circ \\).  
 \\\\( \xi^\circ_\star = \begin{bmatrix} x^\circ_\star & y^\circ_\star  & z^\circ_\star  \end{bmatrix}^T \\\\) </td>
 </tr>
 <tr>
@@ -110,7 +110,7 @@ It is convenient to start by laying out the assumptions that I make while buildi
 <td markdown="span"> Torque described in frame $$ \circ $$</td>
 </tr>
 <tr>
-<td markdown="span"> $$ S\_\alpha, C\_\alpha, T\_\alpha $$ </td>
+<td markdown="span"> $$ S_\alpha, C_\alpha, T_\alpha $$ </td>
 <td markdown="span"> Shorthand for $$ \sin(\alpha), \cos(\alpha), \tan(\alpha) $$</td>
 </tr>
 </tbody>
