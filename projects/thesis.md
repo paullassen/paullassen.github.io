@@ -147,18 +147,22 @@ $$ \mathbf{w}^B_{total} = \begin{bmatrix} \mathbf{f}^B_t \\ \tau^B_t \end{bmatri
 The linear dynamics of the UAV in the inertial world frame \\( W \\) are given by  
 $$ m \ddot{\xi}^W_B = \mathbf{f}^W_g + \mathbf{R}^W_B \mathbf{f}^B_t \tag{6} $$
 where  
-$$ \mathbf{f}^W_g = \begin{bmatrix} 0 \\ 0 \\ -mg \end{bmatrix} $$
+$$ \mathbf{f}^W_g = \begin{bmatrix} 0 \\ 0 \\ -mg \end{bmatrix} \tag{7}$$  
 is the force of gravity and \\( \mathbf{R}^W_B \\) is the rotation matrix, presenting the orientation of \\( B \\) with respect to \\( W \\).
 
 The rotation matrix \\( \mathbf{R}^W_B\\) is parameterized by \\( \eta = \begin{bmatrix} \phi & \theta & \psi \end{bmatrix}^T \\), using the [yaw-pitch-roll convention](https://en.wikipedia.org/wiki/Euler_angles#Tait%E2%80%93Bryan_angles).  
 
-$$ \mathbf{R}^W_B = R_z (\psi) R_y (\theta) R_x (\phi)$$
+$$ \mathbf{R}^W_B = R_z (\psi) R_y (\theta) R_x (\phi) = \begin{bmatrix}C_\psi C_\theta  & C_\psi S_\phi S_\theta - C_\phi S_\psi  & S_\phi S_\psi + C_\phi C_\psi S_\theta \\ C_\theta S_\psi  & C_\phi C_\psi + S_\phi S_\psi S_\theta  & C_\phi S_\psi S_\theta - C_\psi S_\phi \\ -S_\theta  & C_\theta S_\phi  & C_\phi C_\theta\end{bmatrix} \tag{8} $$
 
 where \\( R_z (\psi) \\) represents a rotation of \\( \psi \\) around the \\( z \\) axis, followed by \\( R_y (\theta) \\) around the new \\( y \\) axis and then \\( R_x (\phi) \\) around the final \\( x \\) axis. The inverse operation, that is the rotation matrix from the inertial frame to the body frame, is given by
 
 $$ R^B_W = \left(R^W_B\right)^{-1} = \left(R^W_B\right)^T $$
 
 by the general properties of rotation matrices.
+
+Putting equations 3, 6, 7, and 8 together reveal the linear dynamics of the UAV
+
+$$ m \ddot{\xi}^W_B = \begin{bmatrix}  T (S_\phi S_\psi + C_\phi C_\psi S_\theta) \\ -T (C_\psi S_\phi - C_\phi S_\psi S_\theta) \\ T C_\phi C_\theta - m g\end{bmatrix} $$
 
 ### Contact Model
 
