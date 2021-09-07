@@ -52,17 +52,17 @@ It is convenient to start by laying out the assumptions that I make while buildi
 <tr>
 <td markdown="span"> $$ {\xi}^\circ_\star $$ </td>
 <td markdown="span"> The position of the origin of frame \\( \star \\) w.r.t. frame \\( \circ \\).  
-\\\\( \xi^\circ_\star = \begin{bmatrix} x^\circ_\star & y^\circ_\star  & z^\circ_\star  \end{bmatrix}^T \\\\) </td>
+\\( \xi^\circ_\star = \begin{bmatrix} x^\circ_\star & y^\circ_\star  & z^\circ_\star  \end{bmatrix}^T \\) </td>
 </tr>
 <tr>
 <td markdown="span"> $$ \dot{\xi}^\circ_\star $$ </td>
-<td markdown="span"> The velocity of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \dot{\xi}^\circ_\star = \begin{bmatrix} \dot{x}^\circ_\star & \dot{y}^\circ_\star  & \dot{z}^\circ_\star  \end{bmatrix}^T \\\\) </td>
+<td markdown="span"> The velocity of the origin of frame \\( \star \\) w.r.t. frame \\( \circ \\).  
+\\( \dot{\xi}^\circ_\star = \begin{bmatrix} \dot{x}^\circ_\star & \dot{y}^\circ_\star  & \dot{z}^\circ_\star  \end{bmatrix}^T \\) </td>
 </tr>
 <tr>
 <td markdown="span"> $$ \ddot{\xi}^\circ_\star $$ </td>
-<td markdown="span"> The acceleration of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \ddot{\xi}^\circ_\star = \begin{bmatrix} \ddot{x}^\circ_\star & \ddot{y}^\circ_\star  & \ddot{z}^\circ_\star  \end{bmatrix}^T \\\\) </td>
+<td markdown="span"> The acceleration of the origin of frame \\( \star \\) w.r.t. frame \\( \circ \\).  
+\\( \ddot{\xi}^\circ_\star = \begin{bmatrix} \ddot{x}^\circ_\star & \ddot{y}^\circ_\star  & \ddot{z}^\circ_\star  \end{bmatrix}^T \\) </td>
 </tr>
 <tr>
 <td markdown="span"> $$ R^\circ_\star $$ </td>
@@ -71,23 +71,23 @@ It is convenient to start by laying out the assumptions that I make while buildi
 <tr>
 <td markdown="span"> $$ \eta $$ </td>
 <td markdown="span"> The euler angle parameterization of the orientation of the body frame with respect to the inertial frame.  
-\\\\( \eta = \begin{bmatrix} \phi & \theta & \psi\end{bmatrix}^T \\\\) </td>
+\\( \eta = \begin{bmatrix} \phi & \theta & \psi\end{bmatrix}^T \\) </td>
 </tr>
 <tr>
 <td markdown="span"> $$ \dot{\eta} $$ </td>
 <td markdown="span">  Time derivative of the euler angles.  
-\\\\( \dot{\eta} = \begin{bmatrix} \dot{\phi} & \dot{\theta} & \dot{\psi} \end{bmatrix}^T \\\\) 
+\\( \dot{\eta} = \begin{bmatrix} \dot{\phi} & \dot{\theta} & \dot{\psi} \end{bmatrix}^T \\) 
 </td>
 </tr>
 <tr>
 <td markdown="span"> $$ \nu $$ </td>
 <td markdown="span">  Instantaneous angular velocity of the UAV with respect to the body frame.  
-\\\\( \nu = \begin{bmatrix} p & q & r \end{bmatrix}^T \\\\)</td>
+\\( \nu = \begin{bmatrix} p & q & r \end{bmatrix}^T \\)</td>
 </tr>
 <tr>
 <td markdown="span"> $$ \dot{\nu} $$ </td>
 <td markdown="span"> Instantaneous angular acceleration of the UAV with respect to the body frame.  
-\\\\( \dot{\nu} = \begin{bmatrix} \dot{p} & \dot{q} & \dot{r} \end{bmatrix}^T \\\\)</td>
+\\( \dot{\nu} = \begin{bmatrix} \dot{p} & \dot{q} & \dot{r} \end{bmatrix}^T \\)</td>
 </tr>
 <tr>
 <td markdown="span"> $$ m $$ </td>
