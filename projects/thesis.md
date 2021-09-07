@@ -185,8 +185,29 @@ $$ \nu = \mathbf{W}_\eta \dot{\eta} $$
 
 $$ \dot{\eta} = \mathbf{W}^{-1}_\eta \nu $$
 
+where 
 
+$$ \mathbf{W}_\eta = \begin{bmatrix} 1 & 0 & -S_\theta \\ 0 & C_\theta & C_\theta S_\phi \\ 0 & -S_\phi & C_\theta C_\phi \end{bmatrix} $$
 
+At this point both the linear and rotational dynamics of the UAV have been derived and we are just about ready to move onto the contact model. Before we do so, I'm going to dive a little deeper into equations 1-6.
+
+It is evident from equations 2 and 3 that the force and torque are functions of the squared rotor speeds. This fact carries through to equation 6. It is convenient for future derivations to take a look at the reduced wrench vector \\( \mathbf{w}^B_r \\) w.r.t. the squared motor speeds.
+
+First we define the vector \\( \Omega \\) to be the vector of squared motor speeds.
+
+$$ \Omega = \begin{bmatrix} \omega^2_1 \\ \omega^2_2 \\ \cdots \\ \omega^2_6 \end{bmatrix} $$
+
+It is now possible to descibe the reduced wrench vector as a function of \\( \Omega \\).
+
+$$ \mathbf{w}^B_r = \mathbf{J} \Omega $$
+
+where \\( \mathbf{J} \in \mathbb{R}^{4 \times 6} \\) is the Jacobian of \\( \mathbf{w}^B_r \\) w.r.t. \\( \Omega \\). The pseudoinverse of the Jacobian
+
+$$ M = J^+ $$ 
+
+is called the motor mixer matrix and maps some reduced wrench to the (squared) rotor speeds required to achieve it.
+
+$$ \Omega = M\mathbf{w}^B_r $$
 
 ### Contact Model
 
