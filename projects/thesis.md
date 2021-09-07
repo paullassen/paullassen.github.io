@@ -50,23 +50,23 @@ It is convenient to start by laying out the assumptions that I make while buildi
 <td markdown="span"> The end-effector frame, fixed to the tip of the manipulator</td>
 </tr>
 <tr>
-<td markdown="span"> $$ {\xi}^\circ_\star $$ </td>
+<td markdown="span"> $$ {\xi}^\circ\_\star $$ </td>
 <td markdown="span"> The position of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \xi^\circ_\star = \begin{bmatrix} x^\circ_\star & y^\circ_\star  & z^\circ_\star  \end{bmatrix}^T \\\\) </td>
+\\\\( \xi^\circ\_\star = \begin{bmatrix} x^\circ\_\star & y^\circ\_\star  & z^\circ\_\star  \end{bmatrix}^T \\\\) </td>
 </tr>
 <tr>
-<td markdown="span"> $$ \dot{\xi}^\circ_\star $$ </td>
+<td markdown="span"> $$ \dot{\xi}^\circ\_\star $$ </td>
 <td markdown="span"> The velocity of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \dot{\xi}^\circ_\star = \begin{bmatrix} \dot{x}^\circ_\star & \dot{y}^\circ_\star  & \dot{z}^\circ_\star  \end{bmatrix}^T \\\\) </td>
+\\\\( \dot{\xi}^\circ\_\star = \begin{bmatrix} \dot{x}^\circ\_\star & \dot{y}^\circ\_\star  & \dot{z}^\circ\_\star  \end{bmatrix}^T \\\\) </td>
 </tr>
 <tr>
-<td markdown="span"> $$ \ddot{\xi}^\circ_\star $$ </td>
+<td markdown="span"> $$ \ddot{\xi}^\circ\_\star $$ </td>
 <td markdown="span"> The acceleration of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \ddot{\xi}^\circ_\star = \begin{bmatrix} \ddot{x}^\circ_\star & \ddot{y}^\circ_\star  & \ddot{z}^\circ_\star  \end{bmatrix}^T \\\\) </td>
+\\\\( \ddot{\xi}^\circ\_\star = \begin{bmatrix} \ddot{x}^\circ\_\star & \ddot{y}^\circ\_\star  & \ddot{z}^\circ\_\star  \end{bmatrix}^T \\\\) </td>
 </tr>
 <tr>
-<td markdown="span"> $$ R^\circ_\star $$ </td>
-<td markdown="span"> The rotation matrix representing the orientation of frame $$\star$$ with respect to frame $$\circ$$.  </td>
+<td markdown="span"> $$ R^\circ\_\star $$ </td>
+<td markdown="span"> The [rotation matrix](https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions#Rotation_matrix) representing the orientation of frame $$\star$$ with respect to frame $$\circ$$.  </td>
 </tr>
 <tr>
 <td markdown="span"> $$ \eta $$ </td>
@@ -110,7 +110,7 @@ It is convenient to start by laying out the assumptions that I make while buildi
 <td markdown="span"> Torque described in frame $$ \circ $$</td>
 </tr>
 <tr>
-<td markdown="span"> $$ S_\alpha, C_\alpha, T_\alpha $$ </td>
+<td markdown="span"> $$ S\_\alpha, C\_\alpha, T\_\alpha $$ </td>
 <td markdown="span"> Shorthand for $$ \sin(\alpha), \cos(\alpha), \tan(\alpha) $$</td>
 </tr>
 </tbody>
@@ -118,10 +118,38 @@ It is convenient to start by laying out the assumptions that I make while buildi
 
 
 ### General Model
-For this work I considered a coaxial hexarotor platform with a rigidly attached manipulator. A diagram of the base platform without the manipulator is shown in fig 1. The manipulator is a rod of length \\( L_m \\) attached rigidly to the center of mass of the UAV, extending straight out between rotors 1 and 6, in the direction indicated by the red arrow, along the \\( x \\) axis.
+For this work I considered a coaxial hexarotor platform with a rigidly attached manipulator. A diagram of the base platform without the manipulator is shown in fig 1. The manipulator is a rod of length \\( L\_m \\) attached rigidly to the center of mass of the UAV, extending straight out between rotors 1 and 6, in the direction indicated by the red arrow, along the \\( x \\) axis.
 
 ![](/assets/Thesis_page_4.png)
 *Fig. 1.  Diagram of a coaxial hexarotor. The body frame  \\( B \\)  is attached to the center of mass of the UAV. The direction of the \\( x \\) and \\( y \\) axes are shown, the \\( z \\) projects out towards the reader. The rotors are arranged in counter-rotating pairs.*
+
+I define three frames of reference \\( W \\) , \\( B \\) , and \\( E \\), representing the inertial world frame, the body-fixed frame and the end-effector-fixed frame. It is useful to note that due to assumption 1, the axes of \\( E \\) are always parallel to the axes of \\( B \\).
+
+The six rotors are arranged as shown in fig. 1. Each rotor is centered at a point  
+$$ \mathbf{r}^B\_i = L\_r \begin{bmatrix} \cos(60i - 30) \\ -\sin(60i - 30) \\ 0 \end{bmatrix} $$
+where \\( L\_r \\) is the distance from the center of mass of the UAV to the center of each rotor. The 
+\\( i^{th} \\) rotor generates a force \\( \mathbf{f}^B\_i \\) and a torque \\( \tau^B\_i \\) given by  
+$$ \mathbf{f}^B\_i = k \begin{bmatrix} 0 \\ 0 \\ \omega^2\_i \end{bmatrix} \tag{1} $$
+$$ \tau^B\_i = S(\mathbf{r}^B\_i) \mathbf{f}^B\_i + b \begin{bmatrix} 0 \\ 0 \\ \omega^2\_i \end{bmatrix} + I\_M \begin{bmatrix} 0 \\ 0 \\ \dot{\omega\_i} \end{bmatrix} \tag{2} $$
+where \\( \omega\_i \\) is the angular velocity of the \\( i^{th} \\) rotor, \\( k \\) is the lift constant, \\( b \\) is the drag constant, \\( I\_M \\) is the momnet of inertia of the rotor, and \\( S(\cdot) \\) maps a vector to its [skew symmetric matrix](https://en.wikipedia.org/wiki/Skew-symmetric_matrix).
+
+The derivative motor term \\( I\_M \dot{\omega\_i} \\) is omitted from the rest of the derivation due to it's small value.
+
+The total thrust force \\( \mathbf{f}^B\_t \\) generated by the rotors is found by simply summing the various forces generated by each rotor. Due to the layout of the rotors on a coaxial multirotor, the force generated by each rotor occurs along the \\( z \\) axis of the body frame. The total thrust force then only has one non-zero component ( in \\( B \\) ) denoted \\( T \\).
+$$ \mathbf{f}^B\_t = \sum^6_{i = 1} \mathbf{f}^B\_i = \begin{bmatrix} 0 \\ 0 \\ T \end{bmatrix} \tag{3} $$
+
+The total torque is calculated in the same way.  
+$$ \tau^B\_t = \sum^6_{i = 1} \tau^B\_i = \begin{bmatrix} \tau\_\phi \\ \tau\_\theta \\ \tau\_\psi \end{bmatrix} \tag{4} $$
+ 
+The total wrench generated by the UAV is a vector with 6 elements, 3 elements of force and 3 elements of torque. Of these 6 elements, 4 of them are non-zero, the thrust force along the \\( z \\) axis and torques around each of the axes of \\( B \\). The reduced wrench vector \\( \mathbf{w}^B\_r \\) contains only these active elements.
+$$ \mathbf{w}^B\_{total} = \begin{bmatrix} \mathbf{f}^B\_t \\ \tau^B\_t \end{bmatrix} = \begin{bmatrix}0 \\ 0 \\ T \\ \tau\_\phi \\ \tau\_\theta \\ \tau\_\psi \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ \mathbf{w}^B\_r \end{bmatrix} \tag{5} $$
+
+The linear dynamics of the UAV in the inertial world frame \\( W \\) are given by  
+$$ m \ddot{\xi}^W\_B = \mathbf{f}^W\_g + \mathbf{R}^W\_B \mathbf{f}^B\_t \tag{6} $$
+where \\( \mathbf{f}^W\_g = \begin{bmatrix} 0 & 0 & -mg \end{bmatrix}^T \\) is the force of gravity and \\( \mathbf{R}^W\_B \\) is the rotation matrix, presenting the orientation of \\( B \\) with respect to \\( W \\).
+
+The rotation matrix \\( \mathbf{R}^W\_B\\) is parameterized by \\( \eta = \begin{bmatrix} \phi & \theta & \psi \end{bmatrix}^T \\), using the [yaw-pitch-roll convention](https://en.wikipedia.org/wiki/Euler_angles#Tait%E2%80%93Bryan_angles).  
+$$ \mathbf{R}^W\_B = R\_z (\psi) R\_y (\theta) R\_x (\phi)$$
 
 
 ### Contact Model
