@@ -146,11 +146,19 @@ $$ \mathbf{w}^B_{total} = \begin{bmatrix} \mathbf{f}^B_t \\ \tau^B_t \end{bmatri
 
 The linear dynamics of the UAV in the inertial world frame \\( W \\) are given by  
 $$ m \ddot{\xi}^W_B = \mathbf{f}^W_g + \mathbf{R}^W_B \mathbf{f}^B_t \tag{6} $$
-where \\( \mathbf{f}^W_g = \begin{bmatrix} 0 & 0 & -mg \end{bmatrix}^T \\) is the force of gravity and \\( \mathbf{R}^W_B \\) is the rotation matrix, presenting the orientation of \\( B \\) with respect to \\( W \\).
+where  
+$$ \mathbf{f}^W_g = \begin{bmatrix} 0 \\ 0 \\ -mg \end{bmatrix} $$
+is the force of gravity and \\( \mathbf{R}^W_B \\) is the rotation matrix, presenting the orientation of \\( B \\) with respect to \\( W \\).
 
 The rotation matrix \\( \mathbf{R}^W_B\\) is parameterized by \\( \eta = \begin{bmatrix} \phi & \theta & \psi \end{bmatrix}^T \\), using the [yaw-pitch-roll convention](https://en.wikipedia.org/wiki/Euler_angles#Tait%E2%80%93Bryan_angles).  
+
 $$ \mathbf{R}^W_B = R_z (\psi) R_y (\theta) R_x (\phi)$$
 
+where \\( R_z (\psi) \\) represents a rotation of \\( \psi \\) around the \\( z \\) axis, followed by \\( R_y (\theta) \\) around the new \\( y \\) axis and then \\( R_x (\phi) \\) around the final \\( x \\) axis. The inverse operation, that is the rotation matrix from the inertial frame to the body frame, is given by
+
+$$ R^B_W = \left(R^W_B\right)^{-1} = \left(R^W_B\right)^T $$
+
+by the general properties of rotation matrices.
 
 ### Contact Model
 
