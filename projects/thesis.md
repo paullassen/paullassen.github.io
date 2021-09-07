@@ -50,22 +50,22 @@ It is convenient to start by laying out the assumptions that I make while buildi
 <td markdown="span"> The end-effector frame, fixed to the tip of the manipulator</td>
 </tr>
 <tr>
-<td markdown="span"> $$ {\xi}^\circ\_\star $$ </td>
+<td markdown="span"> $$ {\xi}^\circ_\star $$ </td>
 <td markdown="span"> The position of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \xi^\circ\_\star = \begin{bmatrix} x^\circ\_\star & y^\circ\_\star  & z^\circ\_\star  \end{bmatrix}^T \\\\) </td>
+\\\\( \xi^\circ_\star = \begin{bmatrix} x^\circ_\star & y^\circ_\star  & z^\circ_\star  \end{bmatrix}^T \\\\) </td>
 </tr>
 <tr>
-<td markdown="span"> $$ \dot{\xi}^\circ\_\star $$ </td>
+<td markdown="span"> $$ \dot{\xi}^\circ_\star $$ </td>
 <td markdown="span"> The velocity of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \dot{\xi}^\circ\_\star = \begin{bmatrix} \dot{x}^\circ\_\star & \dot{y}^\circ\_\star  & \dot{z}^\circ\_\star  \end{bmatrix}^T \\\\) </td>
+\\\\( \dot{\xi}^\circ_\star = \begin{bmatrix} \dot{x}^\circ_\star & \dot{y}^\circ_\star  & \dot{z}^\circ_\star  \end{bmatrix}^T \\\\) </td>
 </tr>
 <tr>
-<td markdown="span"> $$ \ddot{\xi}^\circ\_\star $$ </td>
+<td markdown="span"> $$ \ddot{\xi}^\circ_\star $$ </td>
 <td markdown="span"> The acceleration of the origin of frame \\\\( \star \\\\) w.r.t. frame \\\\( \circ \\\\).  
-\\\\( \ddot{\xi}^\circ\_\star = \begin{bmatrix} \ddot{x}^\circ\_\star & \ddot{y}^\circ\_\star  & \ddot{z}^\circ\_\star  \end{bmatrix}^T \\\\) </td>
+\\\\( \ddot{\xi}^\circ_\star = \begin{bmatrix} \ddot{x}^\circ_\star & \ddot{y}^\circ_\star  & \ddot{z}^\circ_\star  \end{bmatrix}^T \\\\) </td>
 </tr>
 <tr>
-<td markdown="span"> $$ R^\circ\_\star $$ </td>
+<td markdown="span"> $$ R^\circ_\star $$ </td>
 <td markdown="span"> The [rotation matrix](https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions#Rotation_matrix) representing the orientation of frame $$\star$$ with respect to frame $$\circ$$.  </td>
 </tr>
 <tr>
