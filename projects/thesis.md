@@ -162,7 +162,24 @@ by the general properties of rotation matrices.
 
 Putting equations 3, 6, 7, and 8 together reveal the linear dynamics of the UAV
 
-$$ m \ddot{\xi}^W_B = \begin{bmatrix}  T (S_\phi S_\psi + C_\phi C_\psi S_\theta) \\ -T (C_\psi S_\phi - C_\phi S_\psi S_\theta) \\ T C_\phi C_\theta - m g\end{bmatrix} $$
+$$ m \ddot{\xi}^W_B = \begin{bmatrix}  T (S_\phi S_\psi + C_\phi C_\psi S_\theta) \\ -T (C_\psi S_\phi - C_\phi S_\psi S_\theta) \\ T C_\phi C_\theta - m g\end{bmatrix} \tag{9}$$
+
+It's worth noting that, for the UAV to remain airborne, it needs to maintain zero acceleration along the \\( z \\) axis of the inertial frame \\( W \\). From equation 9,  
+$$ m \ddot{z}^W_B = T C_\theta C_\phi - mg = 0 $$  
+Solving for \\( T \\) to find the thrust required to hover, reveals  
+$$ T_{hover} = \frac{mg}{C_\theta C_\phi} \tag{10} $$
+
+The rotational dynamics of the UAV in \\( B \\) are given by  
+$$ \mathbf{I}\dot{\nu} + \nu \times (\mathbf{I}\nu) = \tau^B_t \tag{11} $$
+Solving equation 11 for the angular aceleration \\( \dot{\nu} \\),  
+$$ \dot{\nu} = \mathbf{I}^{-1}\left(\tau^B_t - \nu \times \left(\mathbf{I}\nu\right)\right) $$
+
+The transformation from the angular velocity of the UAV with respect to \\( W \\), \\( \dot{\eta} \\), to the angular velocity of the UAV with respect to \\( B \\), \\( \nu \\) , can be expressed as a matrix \\( \mathbf{W}_\eta \\).  
+$$ \nu = \mathbf{W}_\eta \dot{\eta} $$  
+$$ \dot{\eta} = \mathbf{W}^{-1}_\eta \nu $$
+
+
+
 
 ### Contact Model
 
