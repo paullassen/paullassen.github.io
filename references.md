@@ -101,4 +101,8 @@ mkdir -p foxy_ros_base_ws/src
 cd foxy_ros_base_ws/src
 vcs import < /path/to/foxy_ros_base.rosinstall
 ```
-
+## Discover devices on Network
+**__network_discovery __nmap**
+```'bash
+nmap -sP 192.168.86.0/24
+```
