@@ -211,6 +211,14 @@ $$ \Omega = M\mathbf{w}^B_r $$
 
 ### Contact Model
 
+For the contact model, I consider the UAV with its end-effector in contact with the wall. The UAV is considered to be in static equilibrium, that is, not moving or accelerating, linearlly or rotationally.
+
+As the UAV applies a force on the wall, a countervailing force is applied on the end-effector of the UAV. This force is made up of two parts, a normal force and a friction force. The normal force, on the other hand, works to prevent the end-effector from penetrating the contact surface. The friction force occurs parallel to the contact surface and works to prevent the end-effector from slipping along the wall. The magnitude of the force of friction is proportional to the normal force.
+
+From assumption 3 it follows that the contact force experienced by the UAV at the end-effector is,
+
+$$ \mathbf{f}_c = \begin{bmatrix} f_n \\ f_{f,y} \\ f_f{f,z} \end{bmatrix} $$
+
 ## Controller
 
 ### Cascaded Controllers
