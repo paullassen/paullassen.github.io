@@ -217,7 +217,7 @@ As the UAV applies a force on the wall, a countervailing force is applied on the
 
 From assumption 3 it follows that the contact force experienced by the UAV at the end-effector is,
 
-$$ \mathbf{f}_c = \begin{bmatrix} f_n \\ f_{f,y} \\ f_f{f,z} \end{bmatrix} $$
+$$ \mathbf{f}_c = \begin{bmatrix} f_n \\ f_{f,y} \\ f_{f,z} \end{bmatrix} $$
 
 ## Controller
 
