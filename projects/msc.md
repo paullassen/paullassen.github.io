@@ -133,7 +133,7 @@ I define three frames of reference \\( W \\) , \\( B \\) , and \\( E \\), repres
 The six rotors are arranged as shown in fig. 1. Each rotor is centered at a point  
 $$ \mathbf{r}^B_i = L_r \begin{bmatrix} \cos(60i - 30) \\ -\sin(60i - 30) \\ 0 \end{bmatrix} $$
 
-where \\( L_r \\) is the distance from the center of mass of the UAV to the center of each rotor. The 
+where \( L_r \) is the distance from the center of mass of the UAV to the center of each rotor. The 
 \\( i^{th} \\) rotor generates a force \\( \mathbf{f}^B_i \\) and a torque \\( \tau^B_i \\) given by  
 $$ \mathbf{f}^B_i = k \begin{bmatrix} 0 \\ 0 \\ \omega^2_i \end{bmatrix} \tag{1} $$
 
