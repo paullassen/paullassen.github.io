@@ -120,12 +120,12 @@ It is convenient to start by laying out the assumptions that I make while buildi
 </details>
 
 ### General Model
-For this work I considered a coaxial hexarotor platform with a rigidly attached manipulator. A diagram of the base platform without the manipulator is shown in fig 1. The manipulator is a rod of length \\( L_m \) attached rigidly to the center of mass of the UAV, extending straight out between rotors 1 and 6, in the direction indicated by the red arrow, along the \\( x \) axis.
+For this work I considered a coaxial hexarotor platform with a rigidly attached manipulator. A diagram of the base platform without the manipulator is shown in fig 1. The manipulator is a rod of length \\( L_m \\) attached rigidly to the center of mass of the UAV, extending straight out between rotors 1 and 6, in the direction indicated by the red arrow, along the \\( x \\) axis.
 
 ![](/assets/Thesis_page_4.png)
-*Fig. 1.  Diagram of a coaxial hexarotor. The body frame  \\( B \)  is attached to the center of mass of the UAV. The direction of the \\( x \) and \\( y \) axes are shown, the \\( z \) projects out towards the reader. The rotors are arranged in counter-rotating pairs.*
+*Fig. 1.  Diagram of a coaxial hexarotor. The body frame  \\( B \\)  is attached to the center of mass of the UAV. The direction of the \\( x \\) and \\( y \\) axes are shown, the \\( z \\) projects out towards the reader. The rotors are arranged in counter-rotating pairs.*
 
-I define three frames of reference \\( W \) , \\( B \) , and \\( E \), representing the inertial world frame, the body-fixed frame and the end-effector-fixed frame. It is useful to note that due to assumption 1, the axes of \\( E \) are always parallel to the axes of \\( B \).
+I define three frames of reference \\( W \\) , \\( B \\) , and \\( E \\), representing the inertial world frame, the body-fixed frame and the end-effector-fixed frame. It is useful to note that due to assumption 1, the axes of \\( E \\) are always parallel to the axes of \\( B \\).
 
 <details>
 <summary> (<i> Click to see details </i>) </summary>
