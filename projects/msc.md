@@ -128,7 +128,7 @@ For this work I considered a coaxial hexarotor platform with a rigidly attached 
 I define three frames of reference \\( W \\) , \\( B \\) , and \\( E \\), representing the inertial world frame, the body-fixed frame and the end-effector-fixed frame. It is useful to note that due to assumption 1, the axes of \\( E \\) are always parallel to the axes of \\( B \\).
 
 <details>
-<summary> (<i> Click to see details </i>) </summary>
+<summary> (<i> Click to see details </i>) The details can also be found on pages 6-9</summary>
 
 The six rotors are arranged as shown in fig. 1. Each rotor is centered at a point  
 $$ \mathbf{r}^B_i = L_r \begin{bmatrix} \cos(60i - 30) \\ -\sin(60i - 30) \\ 0 \end{bmatrix} $$
@@ -217,6 +217,14 @@ is called the motor mixer matrix and maps some reduced wrench to the (squared) r
 $$ \Omega = M\mathbf{w}^B_r $$
 
 </details>
+
+The Newton-Euler equations of motion describing the UAV are:
+
+$$ m \ddot{\xi}^W_B = \mathbf{f}^W_g + \mathbf{R}^W_B \mathbf{f}^B_t $$
+
+$$ \dot{\nu} = \mathbf{I}^{-1}\left(\tau^B_t - \nu \times \left(\mathbf{I}\nu\right)\right) $$
+
+
 ### Contact Model
 
 For the contact model, I consider the UAV with its end-effector in contact with the wall. The UAV is considered to be in static equilibrium, that is, not moving or accelerating, linearlly or rotationally.
@@ -225,7 +233,7 @@ As the UAV applies a force on the wall, a countervailing force is applied on the
 
 From assumption 3 it follows that the contact force experienced by the UAV at the end-effector is,
 
-$$ \mathbf{f}_c = \begin{bmatrix} f_n \\ f_{f,y} \\ f_{f,z} \end{bmatrix} $$
+$$ \mathbf{f}^W_c = \begin{bmatrix} f_n \\ f_{f,y} \\ f_{f,z} \end{bmatrix} $$
 
 ## Controller
 
