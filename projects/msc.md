@@ -196,7 +196,21 @@ where
 
 $$ \mathbf{W}_\eta = \begin{bmatrix} 1 & 0 & -S_\theta \\ 0 & C_\theta & C_\theta S_\phi \\ 0 & -S_\phi & C_\theta C_\phi \end{bmatrix} $$
 
-At this point both the linear and rotational dynamics of the UAV have been derived and we are just about ready to move onto the contact model. Before we do so, I'm going to dive a little deeper into equations 1-6.
+</details>
+
+The Newton-Euler equations of motion describing the UAV are:
+
+$$ m \ddot{\xi}^W_B = \mathbf{f}^W_g + \mathbf{R}^W_B \mathbf{f}^B_t $$
+
+$$ \dot{\nu} = \mathbf{I}^{-1}\left(\tau^B_t - \nu \times \left(\mathbf{I}\nu\right)\right) $$
+
+
+### Motor Mixer
+
+At this point both the linear and rotational dynamics of the UAV have been derived and we are just about ready to move onto the contact model. Before we do so, I'm going to introduce the Motor Mixer Matrix. The Motor Mixer takes a set of desired forces and torques and outputs the motor speeds required to achieve them
+
+<details>
+<summary> (<i> Click to see details <i>) Details can also be found in 3.3.1 on pages 14-17 </summary>
 
 It is evident from equations 2 and 3 that the force and torque are functions of the squared rotor speeds. This fact carries through to equation 6. It is convenient for future derivations to take a look at the reduced wrench vector \( \mathbf{w}^B_r \) w.r.t. the squared motor speeds.
 
@@ -214,16 +228,9 @@ $$ M = J^+ $$
 
 is called the motor mixer matrix and maps some reduced wrench to the (squared) rotor speeds required to achieve it.
 
-$$ \Omega = M\mathbf{w}^B_r $$
-
 </details>
 
-The Newton-Euler equations of motion describing the UAV are:
-
-$$ m \ddot{\xi}^W_B = \mathbf{f}^W_g + \mathbf{R}^W_B \mathbf{f}^B_t $$
-
-$$ \dot{\nu} = \mathbf{I}^{-1}\left(\tau^B_t - \nu \times \left(\mathbf{I}\nu\right)\right) $$
-
+$$ \Omega = M\mathbf{w}^B_r $$
 
 ### Contact Model
 
@@ -235,11 +242,14 @@ From assumption 3 it follows that the contact force experienced by the UAV at th
 
 $$ \mathbf{f}^W_c = \begin{bmatrix} f_n \\ f_{f,y} \\ f_{f,z} \end{bmatrix} $$
 
-## Controller
+![](/assets/theta_lim_contour_0_7.png)
+*Fig 2.* ***Operating Region*** *The region of Thrust Force and Pitch in which the UAV is physically capable of maintaining* ***static contact*** *with the wall.*
 
-### Cascaded Controllers
 
-### Controllers in Contact
+## Controllers in Contact
+
+![](/assets/real_reg_0_7.png)
+*Fig 3.* ***Realisable Region*** *The region of Thrust Force and Pitch in which the PID attitude controller of the UAV is capable of maintaining* ***static contact*** *with the wall.*
 
 ## Verification
 
