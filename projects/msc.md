@@ -207,10 +207,10 @@ $$ \dot{\nu} = \mathbf{I}^{-1}\left(\tau^B_t - \nu \times \left(\mathbf{I}\nu\ri
 
 ### Motor Mixer
 
-At this point both the linear and rotational dynamics of the UAV have been derived and we are just about ready to move onto the contact model. Before we do so, I'm going to introduce the Motor Mixer Matrix. The Motor Mixer takes a set of desired forces and torques and outputs the motor speeds required to achieve them
+At this point both the linear and rotational dynamics of the UAV have been derived and we are just about ready to move onto the contact model. Before we do so, I'm going to introduce the Motor Mixer Matrix. The Motor Mixer takes a set of desired forces and torques \( \mathbf{w}^B_r \) and outputs the (squared) motor speeds \( \Omega \) required to achieve them.
 
 <details>
-<summary> (<i> Click to see details <i>) Details can also be found in 3.3.1 on pages 14-17 </summary>
+<summary> (<i> Click to see details </i>) Details can also be found in 3.3.1 on pages 14-17</summary>
 
 It is evident from equations 2 and 3 that the force and torque are functions of the squared rotor speeds. This fact carries through to equation 6. It is convenient for future derivations to take a look at the reduced wrench vector \( \mathbf{w}^B_r \) w.r.t. the squared motor speeds.
 
