@@ -282,11 +282,12 @@ T \\
 T + \sqrt{3} s_{mr} (T -  m g C_\theta) \\
 \end{array}\right\rbrack $$
 
-where \\(s_{mr} = L_m/L_r \\) is the ratio of manipulator length to rotor length.
+where \(s_{mr} = L_m/L_r \) is the ratio of manipulator length to rotor length.
 
 The standard layout for coplanar multirotor craft uses brushless dc motors configured to run in only one direction. This fact requires the rotor speeds (and their squares) to be non-negative. Of particular note here, the 3rd and 4th rotor speeds.
 
 $$ T - \sqrt{3} s_{mr} (T - m g C_\theta) \geq 0 $$
+
 <p>
 	<img src="/assets/torque_bound.png">
 	<i>Fig 3. <b>Torque Bound</b> The blue region represents the region of thrust force and pitch angle in which the UAV is capable of counteracting the reaction torque on the UAV from contact. Outside of this region, the UAV is unable to maintain its orientation and will begin to pitch into the wall. The blue region is plotted with \(s_{mr} = 2\), the yellow and cyan dashed lines represent \(s_{mr}=1.5\) and \(s_{mr}=3.4\) respectively.</i>
