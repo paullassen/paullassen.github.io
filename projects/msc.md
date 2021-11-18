@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Thesis
+title: Master's Thesis
 parent: Projects
-nav_order: 21
+nav_order: 0
 ---
 # **Modelling and Control of an Aerial Manipulator**
 On this page I'll present a summary of the work I did for my master's thesis. Some of the work in the thesis was spun off into a paper, submitted to and accepted at the *AIRPHARO 2021 Workshop on Aerial Robotic Systems Physically Interacting with the Environment*.
