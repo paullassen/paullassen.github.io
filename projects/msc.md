@@ -289,7 +289,7 @@ The standard layout for coplanar multirotor craft uses brushless dc motors confi
 $$ T - \sqrt{3} s_{mr} (T - m g C_\theta) \geq 0 $$
 <p>
 	<img src="/assets/torque_bound.png">
-	<i>Fig 3. <b>Torque Bound</b> The blue region represents the region of thrust force and pitch angle in which the UAV is capable of counteracting the reaction torque on the UAV from contact. Outside of this region, the UAV is unable to maintain its orientation and will begin to pitch into the wall. The blue region is plotted with \\(s_{mr} = 2\\), the yellow and cyan dashed lines represent \\(s_{mr}=1.5\) and \(s_{mr}=3.4\) respectively.</i>
+	<i>Fig 3. <b>Torque Bound</b> The blue region represents the region of thrust force and pitch angle in which the UAV is capable of counteracting the reaction torque on the UAV from contact. Outside of this region, the UAV is unable to maintain its orientation and will begin to pitch into the wall. The blue region is plotted with \(s_{mr} = 2\), the yellow and cyan dashed lines represent \(s_{mr}=1.5\) and \(s_{mr}=3.4\) respectively.</i>
 </p>
 
 </details>
