@@ -262,8 +262,10 @@ Applying assumption 4 and the friction inequality reveal the limits imposed by f
 
 $$ \lvert T C_\theta - m g \rvert \leq \mu \lvert T S_\theta \rvert $$
 
+<p>
+	<img src="/assets/friction_bound_0_7.png">
+</P>
 
-![](/assets/friction_bound_0_7.png)
 *Fig 2.* ***Friction Bound*** *The yellow region represents the region of thrust force and pitch angle where the friction force is large enough to prevent the end-effector froms slipping along the wall. The yellow region is plotted with \\(\mu=0.7\\).*
 
 Friction does not provide the only limit to the UAVs ability to maintain static contact. The UAV must also be able to counteract the reaction torque from the contact forces applied at the end effector. The reaction torque is given by,
