@@ -405,10 +405,10 @@ The first two contacts result in sliding, which occurs if the UAV slips out of t
 *Fig. 10* ***First Contact*** *The UAV slips below the friction bound, causing the end-effector to slide down the wall*
 
 ![](/assets/Contact_2.png)
-*Fig. 11* ***First Contact*** *The UAV slips below the friction bound, causing the end-effector to slide down the wall*
+*Fig. 11* ***Second Contact*** *The UAV slips below the friction bound, causing the end-effector to slide down the wall*
 
 ![](/assets/Contact_3.png)
-*Fig. 12* ***First Contact*** *The UAV moves beyond the realisable region and begins to pitch uncontrollably*
+*Fig. 12* ***Third Contact*** *The UAV moves beyond the realisable region and begins to pitch uncontrollably*
 
 ## Conclusion
 
