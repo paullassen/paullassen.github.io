@@ -262,6 +262,7 @@ Applying assumption 4 and the friction inequality reveal the limits imposed by f
 
 $$ \lvert T C_\theta - m g \rvert \leq \mu \lvert T S_\theta \rvert $$
 
+
 ![](/assets/friction_bound_0_7.png)
 *Fig 2.* ***Friction Bound*** *The yellow region represents the region of thrust force and pitch angle where the friction force is large enough to prevent the end-effector froms slipping along the wall. The yellow region is plotted with \\(\mu=0.7\\).*
 
