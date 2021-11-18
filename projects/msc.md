@@ -264,12 +264,12 @@ $$ \lvert T C_\theta - m g \rvert \leq \mu \lvert T S_\theta \rvert $$
 
 <p>
 	<img src="/assets/friction_bound_0_7.png">
+	<i>Fig 2. <b>Friction Bound</b> The yellow region represents the region of thrust force and pitch angle where the friction force is large enough to prevent the end-effector froms slipping along the wall. The yellow region is plotted with \(\mu=0.7\).</i>
 </P>
-*Fig 2.* ***Friction Bound*** *The yellow region represents the region of thrust force and pitch angle where the friction force is large enough to prevent the end-effector froms slipping along the wall. The yellow region is plotted with \\(\mu=0.7\\).*
 
 Friction does not provide the only limit to the UAVs ability to maintain static contact. The UAV must also be able to counteract the reaction torque from the contact forces applied at the end effector. The reaction torque is given by,
 
-$$ \tau^B_c = S\left( \xi^B_E \right) \mathbf{R}^B_W \mathbf{f}^W_c = L_m \left\lbrack\begin{array}\\ 0 \\ T - m g C_\theta \\ 0 \end{array} \right\rbrack $$ 
+$$ \tau^B_c = S\left( \xi^B_E \right) \mathbf{R}^B_W \mathbf{f}^W_c = L_m \begin{bmatrix} 0 \\ T - m g C_\theta \\ 0 \end{bmatrix}$$ 
 
 To assess the limits of the UAVs ability to counteract the reaction torque, we set the desired wrench and pass it through the motor mixer.
 
@@ -287,9 +287,10 @@ where \\(s_{mr} = L_m/L_r \\) is the ratio of manipulator length to rotor length
 The standard layout for coplanar multirotor craft uses brushless dc motors configured to run in only one direction. This fact requires the rotor speeds (and their squares) to be non-negative. Of particular note here, the 3rd and 4th rotor speeds.
 
 $$ T - \sqrt{3} s_{mr} (T - m g C_\theta) \geq 0 $$
-
-![](/assets/torque_bound.png)
-*Fig 3.* ***Torque Bound*** *The blue region represents the region of thrust force and pitch angle in which the UAV is capable of counteracting the reaction torque on the UAV from contact. Outside of this region, the UAV is unable to maintain its orientation and will begin to pitch into the wall. The blue region is plotted with \\(s_{mr} = 2\\), the yellow and cyan dashed lines represent \\(s_{mr}=1.5\\) and \\(s_{mr}=3.4\\) respectively.*
+<p>
+	<img src="/assets/torque_bound.png">
+	<i>Fig 3. <b>Torque Bound</b> The blue region represents the region of thrust force and pitch angle in which the UAV is capable of counteracting the reaction torque on the UAV from contact. Outside of this region, the UAV is unable to maintain its orientation and will begin to pitch into the wall. The blue region is plotted with \\(s_{mr} = 2\\), the yellow and cyan dashed lines represent \\(s_{mr}=1.5\) and \(s_{mr}=3.4\) respectively.</i>
+</p>
 
 </details>
 
