@@ -128,7 +128,7 @@ For this work I considered a coaxial hexarotor platform with a rigidly attached 
 I define three frames of reference \\( W \\) , \\( B \\) , and \\( E \\), representing the inertial world frame, the body-fixed frame and the end-effector-fixed frame. It is useful to note that due to assumption 1, the axes of \\( E \\) are always parallel to the axes of \\( B \\).
 
 <details style="color:blue">
-<summary> (<i> Click to see details </i>) More details can be found on pages 6-9</summary>
+<summary> (<i> Click to see details </i>) </summary>
 
 The six rotors are arranged as shown in fig. 1. Each rotor is centered at a point  
 $$ \mathbf{r}^B_i = L_r \begin{bmatrix} \cos(60i - 30) \\ -\sin(60i - 30) \\ 0 \end{bmatrix} $$
@@ -196,6 +196,7 @@ where
 
 $$ \mathbf{W}_\eta = \begin{bmatrix} 1 & 0 & -S_\theta \\ 0 & C_\theta & C_\theta S_\phi \\ 0 & -S_\phi & C_\theta C_\phi \end{bmatrix} $$
 
+More details can be found in section 3.1 of the thesis on pages 6-9.
 </details>
 
 The Newton-Euler equations of motion describing the UAV are:
@@ -210,7 +211,7 @@ $$ \dot{\nu} = \mathbf{I}^{-1}\left(\tau^B_t - \nu \times \left(\mathbf{I}\nu\ri
 At this point both the linear and rotational dynamics of the UAV have been derived and we are just about ready to move onto the contact model. Before we do so, I'm going to introduce the Motor Mixer Matrix. The Motor Mixer takes a set of desired forces and torques \\( \mathbf{w}^B_r \\) and outputs the (squared) motor speeds \\( \Omega \\) required to achieve them.
 
 <details style="color:blue">
-<summary> (<i> Click to see details </i>) More details can be found in 3.3.1 on pages 14-17</summary>
+<summary> (<i> Click to see details </i>) </summary>
 
 It is evident from equations 2 and 3 that the force and torque are functions of the squared rotor speeds. This fact carries through to equation 6. It is convenient for future derivations to take a look at the reduced wrench vector \( \mathbf{w}^B_r \) w.r.t. the squared motor speeds.
 
@@ -228,6 +229,7 @@ $$ M = J^+ $$
 
 is called the motor mixer matrix and maps some reduced wrench to the (squared) rotor speeds required to achieve it.
 
+More details can be found in section 3.3.1 of the thesis on pages 14-17.
 </details>
 
 $$ \Omega = M\mathbf{w}^B_r $$
@@ -239,7 +241,7 @@ For the contact model, I consider the UAV with its end-effector in contact with 
 I found that the UAVs ability to maintain static contact is defined by two limits. The first is a requirement that the friction force experienced by the end-effector is sufficient to prevent the end-effector from slipping. The second is the limit of the UAVs ability to counteract the reaction torque from the contact forces experienced by the end-effector. 
 
 <details style="color:blue">
-<summary> (<i> Click to see details </i>) More details can be found in 4.1 on pages 40-9</summary>
+<summary> (<i> Click to see details </i>) </summary>
 
 As the UAV applies a force on the wall, a countervailing force is applied on the end-effector of the UAV. This force is made up of two parts, a normal force and a friction force. The normal force, on the other hand, works to prevent the end-effector from penetrating the contact surface. The friction force occurs parallel to the contact surface and works to prevent the end-effector from slipping along the wall. The magnitude of the force of friction is proportional to the normal force.
 
@@ -293,6 +295,7 @@ $$ T - \sqrt{3} s_{mr} (T - m g C_\theta) \geq 0 $$
 	<i>Fig 3. <b>Torque Bound</b> The blue region represents the region of thrust force and pitch angle in which the UAV is capable of counteracting the reaction torque on the UAV from contact. Outside of this region, the UAV is unable to maintain its orientation and will begin to pitch into the wall. The blue region is plotted with \(s_{mr} = 2\), the yellow and cyan dashed lines represent \(s_{mr}=1.5\) and \(s_{mr}=3.4\) respectively.</i>
 </p>
 
+More details can be found in section 4.1 of the thesis on pages 40-49.
 </details>
 
 The **operating region** of the UAV is the region of thrust force and pitch angle in where both the friction bound and the torque bound are satisfied.
@@ -320,7 +323,7 @@ $$ \theta_{ref} = k_{p,x} e'_{p,x} + k_{d,x} e'_{d,x} $$
 It's practical to note that the derivative error terms \\(e_{d,\cdot}\\) for all of the controllers become zero when the UAV is in static contact.
 
 <details style="color:blue">
-<summary> ( <i> Click to see details </i> ) More details can be found in section 4.2 on pages 49-56 </summary> 
+<summary> ( <i> Click to see details </i> ) </summary> 
 
 I'll start with the attitude controller. The attitude controller needs to counteract the reaction torque,
 
@@ -359,7 +362,7 @@ $$ \frac{\delta}{\delta\theta} \theta_{ref} = 1 - \frac{L_m}{k_{p,\theta} \left 
 
 for many values of \(\delta_z\).
 
-
+More details can be found in section 4.2 of the thesis on pages 49-56.
 </details>
 
 Fig. 7 shows the realisable region of thrust force and pitch angle in pink. Within the realisable region (pink), the attitude controller of the UAV is capable of commanding the torque required to maintain static contact. This region is a subset of the operating region (green) in which the UAV is physically capable of maintaining static contact. The operating region is the union of the friction and torque bounds, outside of which either the end-effector slips along the wall (blue) or the UAV pitches uncontrollably into the wall (yellow).
