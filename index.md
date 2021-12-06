@@ -3,16 +3,20 @@ layout: default
 title: Home
 nav_order: 0
 ---
-# **Welcome to Paul Lassen's Blog**
-This is the corner of the internet where I document my personal projects, blog and curate my online CV.  
+# **Paul Lassen's Blog**
+## Welcome
 
-## Who am I?
-My name is Paul Lassen and I would describe myself as a wanderer, a tinkerer, and a gatherer of knowledge which I have no need for. Over the years I have started many small side projects, most of which never made it out of my head.
+This is the corner of the internet where I document my personal projects and curate my online CV.  
 
 <img src="/assets/wanderer.png" width="100%" height=20/>
-## Why am I doing this?
-My hope is that my showing my work publicly as I do it, I'll get more done out of a deep fear of disappointing you, dear reader. As I type into the void, I hope that maybe, some day, a weary traveler will find themselves searching for the solution to some specific issue which I have overcome and rejoice.
+## Who am I?
+My name is Paul Lassen and I am a recent graduate of the Technical University of Denmark. I have a M.Sc.Eng. in Electrical Engineering with a focus on robotics. 
 
+It am a passionate programmer, who enjoys learning and using new technologies. I am proficient in Python, C/C++, and Matlab, and I have experience with ROS, OpenCV, Matlab/Simulink and other related software.
+
+My main interests lie in the field of robotics, and specifically in areas relating to control systems, deep learning, and autonomous navigation.
+
+I'm looking for a position as a software developer, where I can use my skills to create innovative and fascinating products.
 <img src="/assets/traveler_rejoice.png" width="100%" height=20/>
 ## What are all of these links on the left?
 - **Home**: You are here
