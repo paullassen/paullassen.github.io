@@ -16,7 +16,7 @@ It am a passionate programmer, who enjoys learning and using new technologies. I
 
 My main interests lie in the field of robotics, and specifically in areas relating to control systems, deep learning, and autonomous navigation.
 
-I'm looking for a position as a software developer, where I can use my skills to create innovative and fascinating products.
+I'm looking for a position as a software engineer, where I can use my skills to create innovative and fascinating products.
 <img src="/assets/traveler_rejoice.png" width="100%" height=20/>
 ## What are all of these links on the left?
 - **Home**: You are here
