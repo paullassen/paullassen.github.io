@@ -6,7 +6,7 @@ nav_order: 0
 # **Paul Lassen's Blog**
 ## Welcome
 
-This is the corner of the internet where I document my personal projects and curate my online CV.  
+This is the corner of the internet where I document my personal projects and curate my online CV. I've also summarized my master's thesis [here](https://paullassen.com/projects/msc.html).
 
 <img src="/assets/wanderer.png" width="100%" height=20/>
 ## Who am I?
