@@ -16,7 +16,13 @@ It am a passionate programmer, who enjoys learning and using new technologies. I
 
 My main interests lie in the field of robotics, and specifically in areas relating to control systems, deep learning, and autonomous navigation.
 
-I'm looking for a position as a software engineer, where I can use my skills to create innovative and fascinating products.
+## Other Attempt
+I  graduated in May 2021 with an M.Sc.Eng in Electrical Engineering from the Technical University of Denmark. I'm currently looking for new opportunities in the field of robotics. I am a passionate programmer, who enjoys learning and using new technologies. I am proficient in C/C++, Python, and Matlab/Simulink, and I have experience with ROS, OpenCV and other related software. My main interests lie in areas relating to control systems, autonomous systems, machine learning.
+
+In my masters thesis "Modelling and Control of an Aerial Manipulator", I developed mathematical models of a hexarotor platform and used them to quantify the limits on the performance of the platform interacting with it's environment. I also built a physical platform, integrating a variety of technologies -- MoCap, PX4, ROS, MAVLink -- to control the platform and verify the mathematical models.
+
+I participated in the 2019 DTU RoboCup competition, where I was the technical lead of a team of students who built a robot to traverse an obstacle course, while completing a variety of challenges such as object recognition, obstacle avoidance, localization, difficult terrain.
+
 <img src="/assets/traveler_rejoice.png" width="100%" height=20/>
 ## What are all of these links on the left?
 - **Home**: You are here
