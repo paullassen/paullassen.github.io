@@ -20,6 +20,6 @@ My main focus has been on robotics, specifically in areas relating to control sy
 - **Home**: You are here
 - **Projects**: Here you'll find my projects and various bits and bobs of documentation. 
 - **Blog**: Here you can find me ranting about whatever I'm stuck on at the moment
-- **Résumé**: Here you can find my up-to-date résumé/CV
+- **Resume**: Here you can find my up-to-date resume/CV
 - **Notes**: Here you can find the solutions to various challenges I've overcome, from installing ROS to enabling PRUs to code snippets that do a thing.
 - **About**: All about me
