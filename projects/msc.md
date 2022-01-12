@@ -339,7 +339,7 @@ $$ T_{ref} = \frac{1}{C_\theta} (k_{p,z} (z_{ref} - z^W_B) + m g ) = \frac{m g}{
 
 I now rearrange the attitude controller equations to solve for the pitch angle reference,
 
-$$ \theta_{ref} = \theta - \frac{L_m ( m g C_\theta - T_{ref}) } {k_{p,\theta} $$
+$$ \theta_{ref} = \theta - \frac{L_m ( m g C_\theta - T_{ref}) } {k_{p,\theta}} $$
 
 Fig. 6 shows the plot of \( \theta_{ref} \) as a function \( \theta \). We can see that there is an inflection point at (in this case) \(theta = 24.2^\circ \). This represents the limit of the controllers ability to command the UAVs torque.
 
@@ -358,7 +358,7 @@ $$ T_{ref} = \frac{m g }{C_\theta} + \frac{k_{p,z} (\delta_z - L_m S_\theta) }{C
 
 I can now map the realisable region of thrust force and pitch angle by finding the inflection point for a several values of \(\delta_z\). More formally, I find the bound by solving
 
-$$ \frac{\delta}{\delta\theta} \theta_{ref} = 1 - \frac{L_m}{k_{p,\theta} \left ( \frac{\delta}{\delta\theta} T_{ref} + m g S_\theta \right ) = 0 $$ 
+$$ \frac{\delta}{\delta\theta} \theta_{ref} = 1 - \frac{L_m}{k_{p,\theta}} \left ( \frac{\delta}{\delta\theta} T_{ref} + m g S_\theta \right ) = 0 $$ 
 
 for many values of \(\delta_z\).
 
